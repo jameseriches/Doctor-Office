@@ -1,2 +1,22 @@
-<h1>Users#new</h1>
-<p>Find me in app/views/users/new.html.erb</p>
+<h1>Create a new Patient</h1>
+
+<%= form_for @user do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+<br>
+<br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+<br>
+<br>
+  <%= f.label :age %>
+  <%= f.text_field :age %>
+<br>
+<br>
+  <%= f.label :gender %>
+  <%= f.radio_button :gender, 'Male' %> Male
+  <%= f.radio_button :gender, 'Female' %> Female
+<br>
+  <%= f.submit %>
+
+<% end %>
