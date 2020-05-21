@@ -1,2 +1,14 @@
-<h1>Doctors#edit</h1>
-<p>Find me in app/views/doctors/edit.html.erb</p>
+<h1>Edit Doctor Info</h1>
+
+<%= form_for @doctor do |f| %>
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name %>
+<br>
+<br>
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name %>
+<br>
+<br>
+  <%= f.submit %>
+
+<% end %>

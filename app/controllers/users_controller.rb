@@ -19,13 +19,11 @@ class UsersController < ApplicationController
   end
 
   def show
-
   end
 
   def edit
 
   end
-  
   def update
 
     if @user.update(user_params)
@@ -36,7 +34,7 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    User.find(params[:id]).destroy
+    @user.destroy
     redirect_to users_path
   end
 
